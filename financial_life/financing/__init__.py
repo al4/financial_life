@@ -364,7 +364,7 @@ class Report(object):
                 # need to take the latest value
                 if "cum" in self.semantics_of(key):
                     data[key] += value
-                elif not self.semantics_of(key) is "none":
+                elif self.semantics_of(key) != "none":
                     data[key] = value
             return data
 

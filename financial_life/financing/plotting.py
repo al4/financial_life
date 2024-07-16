@@ -160,7 +160,7 @@ def plot_stack_generic(X, Y, c, semantic, *reports, color_theme = C_cold_colors,
 
 def remove_nones(X):
     """ Removes all Nones from a list and replaces them by zero """
-    return [[[0. if v is 'None' else v for v in d] for d in data] for data in X]
+    return [[[0. if v == 'None' else v for v in d] for d in data] for data in X]
 
 def add_zeros(X, Y):
     """ add zeros at the beginning and end to prevent interpolation in join_data

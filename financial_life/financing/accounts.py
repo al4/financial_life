@@ -796,7 +796,7 @@ class Bank_Account(Account):
     def get_table_json(self, report):
         """ Creates a table for a given report """
         rows = []
-        if report.precision is 'daily':
+        if report.precision == 'daily':
             header = ['date', 'from', 'description', 'input', 'output', 'interest', 'account']
 
             for status in report._statuses:
@@ -928,7 +928,7 @@ class Loan(Account):
 
     def get_table_json(self, report):
         rows = []
-        if report.precision is 'daily':
+        if report.precision == 'daily':
             header = ['date', 'from', 'description', 'payment', 'interest', 'account']
             for status in report._statuses:
                 item = [status.strdate,
