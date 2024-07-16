@@ -7,12 +7,11 @@ from calendar import monthrange
 import warnings
 from copy import deepcopy
 from collections import defaultdict
-from collections import Callable
+from typing import Callable
 
 # third-party libraries
 from tabulate import tabulate
 import numpy as np
-from numpy.core.numeric import result_type
 import pandas as pd
 
 # own libraries

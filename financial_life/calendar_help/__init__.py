@@ -1,6 +1,5 @@
 from calendar import monthrange
 from datetime import date
-from datetime import timedelta
 from datetime import datetime
 
 class Bank_Date(datetime):
