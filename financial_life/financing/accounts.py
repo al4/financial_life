@@ -6,7 +6,7 @@ Created on 24.03.2016
 
 # standard libraries
 from datetime import datetime, timedelta
-from collections import Callable
+from typing import Callable
 import warnings
 import logging
 

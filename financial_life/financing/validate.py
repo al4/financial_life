@@ -8,7 +8,7 @@ Collection of validation messages
 """
 # standard libraries
 from datetime import datetime, timedelta
-from collections import Callable
+from typing import Callable
 
 # custom libraries
 
