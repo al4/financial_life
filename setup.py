@@ -38,10 +38,10 @@ skw = dict(
 if have_setuptools is True:
 	skw['install_requires'] = [
 		'Jinja2>=2.7.2,<3',
-		'matplotlib>=1.3.1,<2',
-		'numpy>=1.8.1,<2',
-		'pandas>=0.18.1,<1',
-		'tabulate>=0.7.5,<1',
+		'matplotlib>=1.3.1',
+		'numpy>=1.8.1',
+		'pandas>=0.18.1',
+		'tabulate>=0.7.5',
         'xlwt>=1.2.0',
 	]
 
