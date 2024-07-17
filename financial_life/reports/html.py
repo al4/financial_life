@@ -5,8 +5,7 @@ Created on 03.10.2016
 '''
 # standard libraries
 import os
-import imp
-import platform
+import importlib.util
 
 # third-party libraries
 from  jinja2 import Template
@@ -30,5 +29,7 @@ def report(simulation, style = 'standard', output_dir = 'report'):
     cwd = os.path.dirname(os.path.realpath(__file__))
     template_folder = cwd + sl + path_template + sl + style + sl
     
-    render_module = imp.load_source('render', template_folder + 'render.py')
+    spec = importlib.util.spec_from_file_location('render', template_folder + 'render.py')
+    render_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(render_module)
     render_module.render(simulation, output_dir)
